@@ -10,11 +10,9 @@ const Work: React.FC = () => {
                 <span className="inline-block py-1 px-4 border border-gray-300 rounded-full text-xs font-semibold uppercase tracking-widest text-gray-600 mb-4">
                     Casos de Éxito
                 </span>
-                <h2 className="text-4xl md:text-5xl font-bold font-['Syne']">Trabajos Seleccionados</h2>
+                <h2 className="text-4xl md:text-5xl font-bold font-['Syne']">Nuestros mejores trabajos</h2>
             </div>
-            <a href="#" className="hidden md:flex items-center gap-2 text-sm font-semibold border-b border-black pb-1 hover:opacity-70 transition-opacity">
-                Ver todos los proyectos <ArrowUpRight className="w-4 h-4" />
-            </a>
+            
         </div>
 
         {/* Main Case Study */}
@@ -60,12 +58,50 @@ const Work: React.FC = () => {
                 </div>
             </div>
             
+            {/* El Desafío */}
             <div className="mt-8 pt-8 border-t border-gray-100 px-4 pb-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div className="text-sm font-semibold text-gray-400">El Desafío</div>
+                <div className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+                    El Desafío
+                </div>
                 <div className="md:col-span-3">
-                    <p className="text-xl md:text-2xl font-medium leading-tight">
+                    <p className="text-xl md:text-2xl font-medium leading-snug">
                         Border quería posicionarse como la opción premium para entusiastas del audio mientras irrumpía en el competitivo mercado de audífonos dominado por marcas más grandes.
                     </p>
+                </div>
+            </div>
+
+            {/* Nuestra Estrategia */}
+            <div className="pt-8 border-t border-gray-100 px-4 pb-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+                    Nuestra Estrategia
+                </div>
+                <div className="md:col-span-3">
+                    <p className="text-xl md:text-2xl font-medium leading-snug">
+                        Desarrollamos una estrategia de contenido centrada en video corto y storytelling de producto, optimizada para maximizar alcance orgánico y conversiones de interés.
+                    </p>
+                </div>
+            </div>
+
+            {/* Los Resultados */}
+            <div className="pt-8 border-t border-gray-100 px-4 pb-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+                    Los Resultados
+                </div>
+                <div className="md:col-span-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        <div>
+                            <p className="text-3xl md:text-4xl font-bold">128K</p>
+                            <p className="mt-1 text-sm text-gray-500">Visualizaciones de Reels</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl md:text-4xl font-bold">245%</p>
+                            <p className="mt-1 text-sm text-gray-500">Engagement</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl md:text-4xl font-bold">189%</p>
+                            <p className="mt-1 text-sm text-gray-500">Crecimiento de seguidores</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

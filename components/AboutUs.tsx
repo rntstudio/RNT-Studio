@@ -36,25 +36,6 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* CTA in About Section */}
-        <div className="bg-black text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-             <div className="relative z-10 max-w-2xl mx-auto">
-                <h3 className="text-4xl md:text-6xl font-bold font-['Syne'] mb-8">
-                    ¿Listo para unirte al club?
-                </h3>
-                <p className="text-gray-400 text-lg mb-8">
-                    Déjanos encargarnos de la estrategia mientras tú te enfocas en dirigir tu negocio.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors">
-                    Hablemos <ArrowRight className="w-4 h-4" />
-                </a>
-             </div>
-             {/* Abstract BG */}
-             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600 rounded-full blur-[100px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
-             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-30 translate-y-1/2 -translate-x-1/2"></div>
-        </div>
-
       </div>
     </section>
   );
