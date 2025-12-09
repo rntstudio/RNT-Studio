@@ -7,8 +7,8 @@ const LogoCarousel: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 border-y border-black/5 overflow-hidden bg-[#EFEDE8]">
-      <div className="max-w-7xl mx-auto px-6 mb-4 text-center">
+    <div className="pt-12 pb-20 border-y border-black/5 overflow-hidden bg-[#EFEDE8]">
+      <div className="max-w-7xl mx-auto px-6 mb-6 text-center">
         <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Marcas que confían en nosotros</p>
       </div>
       <div className="relative flex overflow-x-hidden group">
@@ -17,8 +17,7 @@ const LogoCarousel: React.FC = () => {
           {[...brands, ...brands].map((brand, index) => (
             <span 
               key={index} 
-              className="text-3xl md:text-4xl font-['Syne'] font-bold text-black/10 hover:text-black/30 transition-colors cursor-default select-none"
-            >
+              className="text-3xl md:text-4xl font-['Syne'] font-bold text-black/10 hover:text-black/30 transition-colors cursor-default select-none">
               {brand}
             </span>
           ))}

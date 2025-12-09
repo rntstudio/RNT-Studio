@@ -16,7 +16,7 @@ const Equipo: React.FC = () => {
     {
       name: "Maya Rodriguez",
       role: "Especialista en Crecimiento",
-      image: "../src/assets/renata-montoto.png"
+      image: "../src/assets/renata-montoto-0.png"
     }
   ];
 
@@ -36,7 +36,7 @@ const Equipo: React.FC = () => {
                             <img 
                                 src={member.image} 
                                 alt={member.name} 
-                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                className="w-full h-full object-cover transition-all duration-500"
                             />
                         </div>
                         <h4 className="text-2xl font-bold font-['Syne']">{member.name}</h4>
