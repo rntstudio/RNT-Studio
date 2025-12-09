@@ -6,17 +6,17 @@ const Equipo: React.FC = () => {
     {
       name: "Sofia Little",
       role: "Líder Creativa",
-      image: "../src/assets/renata-montoto.png"
+      image: "./src/assets/renata-montoto.png"
     },
     {
       name: "Renata Montoto",
       role: "Fundador & CEO",
-      image: "../src/assets/renata-montoto.png"
+      image: "./src/assets/renata-montoto.png"
     },
     {
       name: "Maya Rodriguez",
       role: "Especialista en Crecimiento",
-      image: "../src/assets/renata-montoto-0.png"
+      image: "./src/assets/renata-montoto-0.png"
     }
   ];
 
