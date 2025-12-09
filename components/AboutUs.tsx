@@ -31,7 +31,7 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
                 <span className="text-sm font-semibold text-gray-500">
-                    Crecimiento en +176 creadores
+                    Facilitando el crecimiento de mas de 20 marcas de manera exitosa
                 </span>
             </div>
           </div>

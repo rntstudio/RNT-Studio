@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="./Contacto" className="group px-8 py-4 bg-black text-white rounded-full font-semibold flex items-center gap-2 hover:bg-gray-800 transition-colors">
+            <a href="./contacto" className="group px-8 py-4 bg-black text-white rounded-full font-semibold flex items-center gap-2 hover:bg-gray-800 transition-colors">
               Agendar llamada
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
