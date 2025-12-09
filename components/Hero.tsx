@@ -16,21 +16,21 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter">
-            Social media <br />
-            done <span className="italic font-serif font-light">right</span>
+            Redes sociales <br />
+            bien <span className="italic font-serif font-light">hechas</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-md leading-relaxed">
-            We combine content, management, and paid media to help brands grow and convert on the social platforms that matter most to you.
+            Combinamos contenido, gestión y medios pagados para ayudar a las marcas a crecer y convertir en las plataformas que más importan.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
             <a href="#contact" className="group px-8 py-4 bg-black text-white rounded-full font-semibold flex items-center gap-2 hover:bg-gray-800 transition-colors">
-              Book a call
+              Agendar llamada
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#work" className="px-8 py-4 bg-transparent border border-gray-300 rounded-full font-semibold hover:border-black transition-colors">
-              View work
+              Ver trabajos
             </a>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                  </div>
                  <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Engagement</p>
+                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Interacción</p>
                     <p className="text-lg font-bold">+124%</p>
                  </div>
             </div>

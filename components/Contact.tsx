@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Loader2 } from 'lucide-react';
+import { ArrowUpRight, Loader2, Plus, Minus } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const [submitting, setSubmitting] = useState(false);
+    const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -10,90 +11,118 @@ const Contact: React.FC = () => {
         // Simulate API call
         setTimeout(() => {
             setSubmitting(false);
-            alert("Thanks! We'll be in touch shortly.");
+            alert("¡Gracias! Nos pondremos en contacto pronto.");
         }, 1500);
     }
 
+    const faqs = [
+        {
+            q: "¿Qué incluye la gestión mensual?",
+            a: "Incluye planificación de contenido, creación de guiones, edición de video, gestión de comunidad y reportes mensuales de rendimiento."
+        },
+        {
+            q: "¿Cuánto tiempo toma ver resultados?",
+            a: "Generalmente vemos un aumento en el alcance en el primer mes, pero los resultados de conversión sólidos suelen tomar de 3 a 6 meses de consistencia."
+        },
+        {
+            q: "¿Trabajan con marcas personales?",
+            a: "¡Sí! Nos especializamos tanto en marcas corporativas como en marcas personales de alto perfil."
+        },
+        {
+            q: "¿Cuáles son sus precios?",
+            a: "Nuestros paquetes comienzan desde $2,000 USD mensuales. Personalizamos cada propuesta según tus necesidades específicas."
+        }
+    ];
+
   return (
     <section id="contact" className="py-24 px-6 bg-[#EFEDE8]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         
-        <div>
-            <span className="inline-block border-b border-black pb-1 mb-8 text-sm font-bold">Book a call</span>
-            <h2 className="text-6xl md:text-7xl font-bold font-['Syne'] leading-none mb-8">
-                Let's get <br/> started
-            </h2>
-            <p className="text-xl text-gray-600 max-w-sm mb-12">
-                Ready to transform your social media? Get in touch and we'll show you what's possible for your brand.
-            </p>
-            
-            <div className="flex items-center gap-4">
-                <div className="flex -space-x-3">
-                    {[1, 2, 3].map((i) => (
-                        <div key={i} className="w-10 h-10 rounded-full border-2 border-[#EFEDE8] overflow-hidden">
-                            <img src={`https://picsum.photos/100/100?random=${i+10}`} alt="Client" className="w-full h-full object-cover" />
+        {/* Left Column: Title + FAQ */}
+        <div className="flex flex-col justify-between">
+            <div>
+                <span className="inline-block border-b border-black pb-1 mb-8 text-sm font-bold">Agendar llamada</span>
+                <h2 className="text-6xl md:text-7xl font-bold font-['Syne'] leading-none mb-8">
+                    Empecemos <br/> ahora
+                </h2>
+                <p className="text-xl text-gray-600 max-w-md mb-12">
+                    ¿Listo para transformar tus redes sociales? Contáctanos y te mostraremos lo que es posible para tu marca.
+                </p>
+            </div>
+
+            {/* FAQ Accordion */}
+            <div className="mt-8 space-y-4">
+                <h3 className="text-2xl font-bold font-['Syne'] mb-6">Preguntas Frecuentes</h3>
+                {faqs.map((faq, index) => (
+                    <div key={index} className="border-b border-black/10 pb-4">
+                        <button 
+                            className="w-full flex justify-between items-center text-left text-lg font-semibold py-2 hover:opacity-70 transition-opacity"
+                            onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                        >
+                            {faq.q}
+                            {openFaq === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                        </button>
+                        <div className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                            <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
                         </div>
-                    ))}
-                    <div className="w-10 h-10 rounded-full bg-black text-white border-2 border-[#EFEDE8] flex items-center justify-center text-xs font-bold">+170</div>
-                </div>
-                <div>
-                    <div className="flex text-yellow-500 text-xs mb-1">★★★★★</div>
-                    <p className="text-xs font-bold text-gray-500">Grown over 176+ creators</p>
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8 bg-transparent">
-            <div className="space-y-6">
-                <div className="group">
-                    <label className="block text-sm font-medium text-gray-500 mb-2">Name *</label>
-                    <input required type="text" className="w-full bg-transparent border-b border-gray-300 py-3 text-lg focus:outline-none focus:border-black transition-colors" />
+        {/* Right Column: Form */}
+        <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+            <h3 className="text-2xl font-bold font-['Syne'] mb-8">Formulario de Contacto</h3>
+            <form onSubmit={handleSubmit} className="space-y-8 bg-transparent">
+                <div className="space-y-6">
+                    <div className="group">
+                        <label className="block text-sm font-medium text-gray-500 mb-2">Nombre *</label>
+                        <input required type="text" className="w-full bg-[#F5F5F0] rounded-xl border-none py-4 px-4 text-lg focus:ring-2 focus:ring-black transition-all" placeholder="Tu nombre" />
+                    </div>
+                    <div className="group">
+                        <label className="block text-sm font-medium text-gray-500 mb-2">Correo *</label>
+                        <input required type="email" className="w-full bg-[#F5F5F0] rounded-xl border-none py-4 px-4 text-lg focus:ring-2 focus:ring-black transition-all" placeholder="tu@email.com" />
+                    </div>
                 </div>
-                <div className="group">
-                    <label className="block text-sm font-medium text-gray-500 mb-2">Email *</label>
-                    <input required type="email" className="w-full bg-transparent border-b border-gray-300 py-3 text-lg focus:outline-none focus:border-black transition-colors" />
+
+                <div>
+                    <label className="block text-sm font-medium text-gray-500 mb-4">¿Qué servicios te interesan?</label>
+                    <div className="flex flex-wrap gap-3">
+                        {['Contenido', 'Gestión', 'Ads', 'Todo'].map(opt => (
+                            <label key={opt} className="cursor-pointer">
+                                <input type="checkbox" className="peer sr-only" />
+                                <span className="inline-block px-4 py-2 rounded-full border border-gray-200 bg-white text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black transition-all">
+                                    {opt}
+                                </span>
+                            </label>
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <label className="block text-sm font-medium text-gray-500 mb-4">What services are you interested in?</label>
-                <div className="flex flex-wrap gap-3">
-                    {['Content Creation', 'Social Management', 'Paid Media', 'All'].map(opt => (
-                        <label key={opt} className="cursor-pointer">
-                            <input type="checkbox" className="peer sr-only" />
-                            <span className="inline-block px-4 py-2 rounded-full border border-gray-300 text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black transition-all">
-                                {opt}
-                            </span>
-                        </label>
-                    ))}
+                <div>
+                    <label className="block text-sm font-medium text-gray-500 mb-4">¿Presupuesto mensual?</label>
+                    <div className="flex flex-wrap gap-3">
+                        {['< $2K', '$2K-$5K', '$5K-$10K', '$10K+'].map(opt => (
+                            <label key={opt} className="cursor-pointer">
+                                <input type="radio" name="budget" className="peer sr-only" />
+                                <span className="inline-block px-4 py-2 rounded-full border border-gray-200 bg-white text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black transition-all">
+                                    {opt}
+                                </span>
+                            </label>
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <label className="block text-sm font-medium text-gray-500 mb-4">Current monthly social media budget?</label>
-                <div className="flex flex-wrap gap-3">
-                    {['Under $2K', '$2K-$5K', '$5K-$10K', '$10K+'].map(opt => (
-                        <label key={opt} className="cursor-pointer">
-                            <input type="radio" name="budget" className="peer sr-only" />
-                            <span className="inline-block px-4 py-2 rounded-full border border-gray-300 text-sm peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black transition-all">
-                                {opt}
-                            </span>
-                        </label>
-                    ))}
+                <div>
+                    <label className="block text-sm font-medium text-gray-500 mb-2">Detalles del proyecto *</label>
+                    <textarea required rows={3} className="w-full bg-[#F5F5F0] rounded-xl border-none py-4 px-4 text-lg focus:ring-2 focus:ring-black transition-all resize-none" placeholder="Cuéntanos más..."></textarea>
                 </div>
-            </div>
 
-            <div>
-                <label className="block text-sm font-medium text-gray-500 mb-2">Tell us about your business... *</label>
-                <textarea required rows={3} className="w-full bg-transparent border-b border-gray-300 py-3 text-lg focus:outline-none focus:border-black transition-colors resize-none"></textarea>
-            </div>
-
-            <button disabled={submitting} type="submit" className="w-full bg-black text-white py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-70">
-                {submitting ? <Loader2 className="animate-spin" /> : <>Book a call <ArrowUpRight className="w-5 h-5" /></>}
-            </button>
-            
-            <p className="text-xs text-gray-400 text-center">By submitting, you agree to our terms & conditions.</p>
-        </form>
+                <button disabled={submitting} type="submit" className="w-full bg-black text-white py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-70">
+                    {submitting ? <Loader2 className="animate-spin" /> : <>Enviar Solicitud <ArrowUpRight className="w-5 h-5" /></>}
+                </button>
+            </form>
+        </div>
 
       </div>
     </section>

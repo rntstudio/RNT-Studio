@@ -17,10 +17,12 @@ export const generateSocialStrategy = async (brandName: string, industry: string
       Brand Name: ${brandName}
       Industry: ${industry}
       
+      IMPORTANT: The output must be in Spanish.
+      
       Output JSON with the following structure:
       {
-        "headline": "A catchy 1-sentence value proposition for their bio",
-        "hooks": ["3 viral video hook ideas specific to their niche"],
+        "headline": "A catchy 1-sentence value proposition for their bio (in Spanish)",
+        "hooks": ["3 viral video hook ideas specific to their niche (in Spanish)"],
         "hashtags": ["5 relevant, high-traffic hashtags"]
       }
       
@@ -42,9 +44,9 @@ export const generateSocialStrategy = async (brandName: string, industry: string
   } catch (error) {
     console.error("Error generating strategy:", error);
     return {
-      headline: "Elevate your digital presence with RNT Studio.",
-      hooks: ["Day in the life...", "3 Secrets about...", "How we transformed..."],
-      hashtags: ["#viral", "#growth", "#socialmedia"]
+      headline: "Eleva tu presencia digital con RNT Studio.",
+      hooks: ["Un día en la vida...", "3 Secretos sobre...", "Cómo transformamos..."],
+      hashtags: ["#viral", "#crecimiento", "#redessociales"]
     };
   }
 };

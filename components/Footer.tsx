@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
+            <a href="#" className="hover:text-white transition-colors">Términos de Servicio</a>
         </div>
 
         <div className="flex gap-4">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 
       </div>
       <div className="text-center mt-12 text-gray-600 text-xs">
-        © 2025 RNT Studio. All rights reserved.
+        © 2025 RNT Studio. Todos los derechos reservados.
       </div>
     </footer>
   );

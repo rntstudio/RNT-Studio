@@ -5,34 +5,34 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <Camera className="w-8 h-8" />,
-      title: "Content Creation",
-      description: "Short-form video, UGC, reels, and visuals designed to stop the scroll and spark engagement.",
+      title: "Creación de Contenido",
+      description: "Video corto, UGC, reels y visuales diseñados para detener el scroll y generar interacción.",
       bg: "bg-[#F5F5F0]"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "Social Management",
-      description: "We handle your content calendar, posting, and day-to-day management of your socials.",
+      title: "Gestión de Redes",
+      description: "Manejamos tu calendario de contenido, publicaciones y la gestión diaria de tus redes sociales.",
       bg: "bg-[#FDFCF8]"
     },
     {
       icon: <Megaphone className="w-8 h-8" />,
-      title: "Paid Media",
-      description: "We build and manage targeted ad campaigns that turn attention into results and help you scale.",
+      title: "Medios Pagados",
+      description: "Creamos y gestionamos campañas publicitarias dirigidas que convierten la atención en resultados y te ayudan a escalar.",
       bg: "bg-[#FFFBF5]"
     }
   ];
 
   return (
-    <section id="about" className="py-24 px-6 bg-white rounded-t-[3rem] -mt-12 relative z-20">
+    <section id="services" className="pt-40 pb-24 px-6 bg-white rounded-t-[3rem] -mt-12 relative z-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <span className="inline-block py-1 px-4 border border-gray-200 rounded-full text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">
-            Services
+            Servicios
           </span>
           <h2 className="text-5xl md:text-6xl font-bold font-['Syne']">
-            How we can <br />
-            help you <span className="italic font-serif">grooow</span>
+            Cómo podemos <br />
+            ayudarte a <span className="italic font-serif">creceeer</span>
           </h2>
         </div>
 
