@@ -6,17 +6,17 @@ const Equipo: React.FC = () => {
     {
       name: "Sofia Little",
       role: "Líder Creativa",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
+      image: "../dist/assets/renata-montoto.png"
     },
     {
-      name: "James Cohen",
+      name: "Renata Montoto",
       role: "Fundador & CEO",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"
+      image: "../dist/assets/renata-montoto.png"
     },
     {
       name: "Maya Rodriguez",
       role: "Especialista en Crecimiento",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
+      image: "../dist/assets/renata-montoto.png"
     }
   ];
 

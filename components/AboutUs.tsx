@@ -2,23 +2,6 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
-  const team = [
-    {
-      name: "Sofia Little",
-      role: "Líder Creativa",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-      name: "James Cohen",
-      role: "Fundador & CEO",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-      name: "Maya Rodriguez",
-      role: "Especialista en Crecimiento",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
-    }
-  ];
 
   return (
     <section id="about-us" className="py-24 px-6 bg-[#EFEDE8]">
@@ -52,28 +35,6 @@ const AboutUs: React.FC = () => {
                 </span>
             </div>
           </div>
-        </div>
-
-        {/* Team Grid */}
-        <div className="mb-20">
-            <h3 className="text-3xl md:text-5xl font-bold font-['Syne'] text-center mb-16">
-                Conoce al equipo detrás de tu <span className="italic font-serif font-light">éxito</span>.
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {team.map((member, index) => (
-                    <div key={index} className="group">
-                        <div className="relative h-[450px] md:h-[550px] rounded-[2rem] overflow-hidden mb-6 bg-gray-200">
-                            <img 
-                                src={member.image} 
-                                alt={member.name} 
-                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            />
-                        </div>
-                        <h4 className="text-2xl font-bold font-['Syne']">{member.name}</h4>
-                        <p className="text-gray-500 mt-1">{member.role}</p>
-                    </div>
-                ))}
-            </div>
         </div>
 
         {/* CTA in About Section */}

@@ -35,11 +35,11 @@ const Contact: React.FC = () => {
     ];
 
   return (
-    <section id="contact" className="py-24 px-6 bg-[#EFEDE8]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+    <section id="contact" className="py-24 px-8 md:px-12 lg:px-16 bg-[#EFEDE8]">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 gap-16">
 
         {/* Right Column: Form */}
-        <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+        <div className="w-full bg-white rounded-[2.5rem] p-10 md:p-14 shadow-sm">
             <h3 className="text-2xl font-bold font-['Syne'] mb-8">Formulario de Contacto</h3>
             <form onSubmit={handleSubmit} className="space-y-8 bg-transparent">
                 <div className="space-y-6">

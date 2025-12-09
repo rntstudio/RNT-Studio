@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs';
 import CTA from '../components/CTA';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import Equipo from '@/components/Equipo';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main>
         <AboutUs />
+        <Equipo />
         <FAQ />
         <CTA />
       </main>

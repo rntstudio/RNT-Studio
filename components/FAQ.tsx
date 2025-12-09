@@ -24,24 +24,51 @@ const FAQ: React.FC = () => {
         ];
 
         return (
-            <section id="faq" className="py-24 px-6 bg-[#EFEDE8]">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold font-['Syne'] mb-8">Preguntas Frecuentes</h2>
-                    <div className="mt-8 space-y-4">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="border-b border-black/10 pb-4">
-                                <button
-                                    className="w-full flex justify-between items-center text-left text-lg font-semibold py-2 hover:opacity-70 transition-opacity"
-                                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                                >
-                                    {faq.q}
-                                    {openFaq === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                                </button>
-                                <div className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                                    <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
-                                </div>
-                            </div>
-                        ))}
+            <section id="faq" className="py-24 px-8 md:px-12 lg:px-16 bg-[#EFEDE8]">
+                <div className="max-w-5xl mx-auto">
+                    <div className="bg-[#F5F2EC] rounded-[2.5rem] p-8 md:p-12 lg:p-14 shadow-sm">
+                        {/* Small tag */}
+                        <div className="inline-flex items-center px-4 py-2 rounded-xl bg-black/5 text-sm font-medium text-black mb-8">
+                            Preguntas
+                        </div>
+
+                        {/* Title */}
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-['Syne'] leading-tight mb-10">
+                            Preguntas<br />
+                            <span className="italic">Frecuentes</span>
+                        </h2>
+
+                        {/* Accordion */}
+                        <div className="space-y-4">
+                            {faqs.map((faq, index) => {
+                                const isOpen = openFaq === index;
+                                return (
+                                    <div key={index} className="bg-[#EFECE6] rounded-2xl px-6 md:px-8 py-5">
+                                        <button
+                                            type="button"
+                                            className="w-full flex items-center justify-between gap-6 text-left"
+                                            onClick={() => setOpenFaq(isOpen ? null : index)}
+                                        >
+                                            <span className="text-lg md:text-xl font-semibold">
+                                                {faq.q}
+                                            </span>
+
+                                            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white shrink-0">
+                                                {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                                            </span>
+                                        </button>
+
+                                        <div
+                                            className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-40 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}
+                                        >
+                                            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                                {faq.a}
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </section>

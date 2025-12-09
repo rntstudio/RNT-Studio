@@ -26,52 +26,23 @@ const Header: React.FC = () => {
     e.preventDefault();
     setMobileMenuOpen(false);
 
-    // If it's an absolute route (starts with '/'), navigate using router
-    if (href.startsWith('/')) {
-      navigate(href);
+    // Always go to the top when using the navbar
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // If there's a hash, attempt to scroll to it after navigation
-      const hashIndex = href.indexOf('#');
-      if (hashIndex !== -1) {
-        const hash = href.slice(hashIndex);
-        setTimeout(() => {
-          const el = document.querySelector(hash);
-          if (el) {
-            const headerOffset = 100;
-            const pos = el.getBoundingClientRect().top + window.scrollY - headerOffset;
-            window.scrollTo({ top: pos, behavior: 'smooth' });
-          }
-        }, 50);
-      }
+    // Navigate to the base route (ignore any hash)
+    const baseHref = href.split('#')[0];
 
+    if (baseHref.startsWith('/')) {
+      navigate(baseHref);
       return;
     }
 
-    // Fallback: anchor on same page
-    if (href === '#') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Fallback for non-router anchors
+    if (baseHref === '#' || baseHref.length === 0) {
       return;
     }
 
-    const element = document.querySelector(href);
-    if (element) {
-      const headerOffset = 100; // Adjust for fixed header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    } else {
-      // If anchor not found on current page, navigate to /inicio with hash
-      navigate(`/inicio${href}`);
-      setTimeout(() => {
-        const el = document.querySelector(href);
-        if (el) {
-          const headerOffset = 100;
-          const pos = el.getBoundingClientRect().top + window.scrollY - headerOffset;
-          window.scrollTo({ top: pos, behavior: 'smooth' });
-        }
-      }, 100);
-    }
+    navigate(baseHref);
   };
 
   return (
