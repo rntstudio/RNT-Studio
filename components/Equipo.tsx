@@ -1,22 +1,22 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import {renata, renata0,} from "../src/assets/";
 
 const Equipo: React.FC = () => {
   const team = [
     {
       name: "Sofia Little",
       role: "Líder Creativa",
-      image: "./src/assets/renata-montoto.png"
+      image: renata
     },
     {
       name: "Renata Montoto",
       role: "Fundador & CEO",
-      image: "./src/assets/renata-montoto.png"
+      image: renata,
     },
     {
       name: "Maya Rodriguez",
       role: "Especialista en Crecimiento",
-      image: "./src/assets/renata-montoto-0.png"
+      image: renata0
     }
   ];
 
