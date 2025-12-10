@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
                  <p className="text-gray-600 text-lg mb-10 max-w-md mx-auto md:mx-0">
                     Agenda una llamada de estrategia gratuita de 30 minutos y te mostraremos cómo convertir seguidores en clientes.
                  </p>
-                 <a href="./Contacto" className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full font-bold hover:scale-105 transition-transform">
+                 <a href="/contacto" className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full font-bold hover:scale-105 transition-transform">
                     Agendar una llamada <ArrowRight className="w-4 h-4" />
                  </a>
              </div>
