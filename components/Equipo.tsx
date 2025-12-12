@@ -1,5 +1,5 @@
 import React from 'react';
-import {renata, rode, coni, renata_porro, rode_porro,} from "../src/assets/";
+import {renata, rode, coni, } from "../src/assets/";
 
 const Equipo: React.FC = () => {
   const team = [
