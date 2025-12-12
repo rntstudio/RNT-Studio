@@ -4,6 +4,7 @@ import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 
+
 function App() {
   return (
     <div className="min-h-screen bg-[#EFEDE8] selection:bg-black selection:text-white">

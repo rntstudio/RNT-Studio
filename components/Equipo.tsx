@@ -1,23 +1,18 @@
 import React from 'react';
-import {renata, renata0,} from "../src/assets/";
+import {renata, renata0, pipi,} from "../src/assets/";
 
 const Equipo: React.FC = () => {
   const team = [
     {
-      name: "Sofia Little",
+      name: "Mi amiga la trola",
       role: "Líder Creativa",
       image: renata
     },
     {
-      name: "Renata Montoto",
+      name: "La amiga de la negra",
       role: "Fundador & CEO",
-      image: renata,
+      image: pipi,
     },
-    {
-      name: "Maya Rodriguez",
-      role: "Especialista en Crecimiento",
-      image: renata0
-    }
   ];
 
   return (
@@ -29,7 +24,7 @@ const Equipo: React.FC = () => {
             <h3 className="text-3xl md:text-5xl font-bold font-['Syne'] text-center mb-16">
                 Conoce al equipo detrás de tu <span className="italic font-serif font-light">éxito</span>.
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {team.map((member, index) => (
                     <div key={index} className="group">
                         <div className="relative h-[450px] md:h-[550px] rounded-[2rem] overflow-hidden mb-6 bg-gray-200">

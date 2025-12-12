@@ -6,13 +6,13 @@ const Services: React.FC = () => {
     {
       icon: <Camera className="w-8 h-8" />,
       title: "Creación de Contenido",
-      description: "Video corto, UGC, reels y visuales diseñados para detener el scroll y generar interacción.",
+      description: "Contenido pensado, estético y con intención. Videos cortos, UCG y piezas visuales que cuentan tu hitoria, detienen el scroll y construyen identidad",
       bg: "bg-[#F5F5F0]"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Gestión de Redes",
-      description: "Manejamos tu calendario de contenido, publicaciones y la gestión diaria de tus redes sociales.",
+      description: "Estrategia, voz de marca y coherencia diaria. Planificamos, ejecutamos y analizamos tu presencia digital para que tus redes comuniquen con propósito.",
       bg: "bg-[#FDFCF8]"
     },
     {

@@ -1,11 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { phone_scroll } from '../src/assets';
 
 const CTA: React.FC = () => {
   return (
     <section className="py-12 px-6 bg-[#EFEDE8]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] gap-6">
         
         {/* Left Card */}
         <div className="bg-[#FDFBF7] rounded-[3rem] p-12 md:p-16 flex flex-col justify-center items-start relative overflow-hidden min-h-[500px]">
@@ -31,28 +32,17 @@ const CTA: React.FC = () => {
 
         {/* Right Card - Visual */}
         <div className="bg-[#FDFBF7] rounded-[3rem] p-12 flex items-center justify-center relative overflow-hidden min-h-[500px]">
-             <div className="relative w-[300px] h-[550px] bg-[#2A2A2A] rounded-[3rem] border-8 border-[#2A2A2A] shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-700">
-                <div className="w-full h-full bg-[#EFEDE8] rounded-[2.5rem] overflow-hidden p-4 relative">
-                    {/* Header */}
-                    <div className="flex items-center justify-between mb-4">
-                        <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                        <div className="w-20 h-2 rounded-full bg-gray-200"></div>
-                    </div>
-                    {/* Post */}
-                    <div className="w-full aspect-[4/5] bg-gradient-to-tr from-orange-200 to-red-200 rounded-2xl mb-4 shadow-inner"></div>
-                    {/* Lines */}
-                    <div className="space-y-2 mb-6">
-                        <div className="w-3/4 h-2 rounded-full bg-gray-200"></div>
-                        <div className="w-1/2 h-2 rounded-full bg-gray-200"></div>
-                    </div>
-                    {/* Icons */}
-                    <div className="flex gap-3">
-                         <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                         <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                         <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                    </div>
-                </div>
-             </div>
+            <div className="relative h-[400px] md:h-[460px] lg:h-[500px] aspect-[9/16] rounded-[2.5rem] overflow-hidden bg-[#EFEDE8] shadow-2xl">
+              <video
+                className="w-full h-full object-cover"
+                src={phone_scroll}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+          </div>
         </div>
 
       </div>
