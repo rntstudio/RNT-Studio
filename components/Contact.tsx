@@ -102,7 +102,7 @@ return (
                                         required 
                                         type="text" 
                                         className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all outline-none" 
-                                        placeholder="Tu nombre" 
+                                        placeholder="Nombre, empresa/negocio/marca" 
                                     />
                                 </div>
                                 <div className="group">
@@ -143,7 +143,7 @@ return (
                             <div>
                                 <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">¿Presupuesto mensual?</label>
                                 <div className="flex flex-wrap gap-2">
-                                    {['- de $600K', '$600K-$2M', '$2M-$6M', '$6M+'].map(opt => (
+                                    {['- de $400K', '$400K-$750K', '$750K-1.5M', '$1.5M+'].map(opt => (
                                         <label key={opt} className="cursor-pointer">
                                             <input 
                                                 type="radio" 
@@ -170,7 +170,7 @@ return (
                                     required 
                                     rows={3} 
                                     className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all resize-none outline-none" 
-                                    placeholder="Cuéntanos más..."
+                                    placeholder="información clave para entender tus necesidades"
                                 ></textarea>
                             </div>
 
@@ -286,10 +286,10 @@ return (
                                     </div>
                                     <h3 className="font-semibold text-stone-900 text-sm md:text-base truncate">Teléfono</h3>
                                 </div>
+                                <p className="font-semibold text-stone-900 text-sm md:text-base mb-1 break-words">+ 54 9 11 3231 1023</p>
                                 <p className="text-xs md:text-sm text-stone-500 mb-3 leading-relaxed">
                                     Llamanos para una consulta rápida.
                                 </p>
-                                <p className="font-semibold text-stone-900 text-sm md:text-base mb-1 break-words">+ 54 9 11 3231 1023</p>
                             </div>
 
                         </div>

@@ -17,7 +17,19 @@ const AboutUs: React.FC = () => {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-              Somos estrategas, creadores y expertos en crecimiento que creen que las redes sociales deben generar resultados comerciales reales, no solo verse bonitas. Cada marca merece una presencia social que realmente funcione.
+              En RNT Studio ayudamos a marcas, negocios y creadores a comunicar con claridad, intención y coherencia.
+              Nuestra misión es construir presencias digitales que transmitan identidad, conecten con la audiencia correcta y generen crecimiento real.
+
+              No hacemos contenido por hacer.
+              Creamos estrategias que ordenan, diferencian y potencian a cada marca desde adentro hacia afuera.
+
+              Somos un estudio creado para quienes entienden que comunicar es más que publicar:
+              es encontrar una voz, una estética y una estrategia que trabajen juntas.
+
+              Nos mueve un principio:
+              las marcas crecen cuando lo que dicen coincide con lo que son.
+
+              Por eso diseñamos contenido con intención y estrategias que se sienten, se ven y funcionan.
             </p>
             <div className="flex items-center gap-4">
                 <div className="flex -space-x-4">

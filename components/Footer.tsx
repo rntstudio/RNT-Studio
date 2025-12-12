@@ -15,11 +15,11 @@ const Footer: React.FC = () => {
             </Link>
 
             <h2 className="text-4xl md:text-5xl font-bold font-['Syne'] leading-[1.1] tracking-tight">
-              Redes sociales que dan resultados <span className="italic font-serif font-light">reales</span>.
+              Redes sociales que impulsan<br /> <span className="italic font-serif font-light">tu crecimiento</span>.
             </h2>
 
             <p className="text-gray-400 text-lg">
-              Creado para creadores, negocios y marcas que buscan impacto.
+              Para marcas, negocios y creadores que quieren destacar.
             </p>
 
             <div className="flex gap-4">
@@ -44,6 +44,7 @@ const Footer: React.FC = () => {
                 <li><Link to="/#" className="hover:text-white transition-colors">Inicio</Link></li>
                 <li><Link to="/nosotros/#" className="hover:text-white transition-colors">Nosotros</Link></li>
                 <li><Link to="/cde/#" className="hover:text-white transition-colors">Casos de Éxito</Link></li>
+                <li><Link to="/contacto" className="hover:text-white transition-colors">Agendar llamada</Link></li>
               </ul>
             </div>
 
@@ -51,10 +52,28 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="font-bold mb-6 text-sm uppercase tracking-wider text-white">Conectar</h3>
               <ul className="space-y-4 text-gray-400 font-medium">
-                <li><Link to="/contacto" className="hover:text-white transition-colors">Agendar llamada</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
+                <li>
+                <p className="hover:text-white transition-colors">+54 9 11 3231-1023</p>
+                </li>
+                <li>
+                <p className="hover:text-white transition-colors">rnt.sstudio@gmail.com</p>
+                </li>
+                <li>
+                <a
+                href="https://www.instagram.com/rnt_studios/" className="hover:text-white transition-colors"
+                target="_blank"
+                >
+                  Instragram
+                </a>
+                </li>
+                <li>
+                <a
+                href="https://www.tiktok.com/@rnt.studio" className="hover:text-white transition-colors"
+                target="_blank"
+                >
+                  TikTok
+                </a>
+                </li>
               </ul>
             </div>
 

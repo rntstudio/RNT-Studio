@@ -6,21 +6,25 @@ const FAQ: React.FC = () => {
 
         const faqs = [
                 {
-                        q: "¿Qué incluye la gestión mensual?",
-                        a: "Incluye planificación de contenido, creación de guiones, edición de video, gestión de comunidad y reportes mensuales de rendimiento."
+                        q: "¿Cómo trabajan la estrategia de mi marca?",
+                        a: "Creamos una estrategia personalizada basada en objetivos, identidad, audiencia y métricas. Nada se improvisa: cada acción responde a un propósito."
                 },
                 {
-                        q: "¿Cuánto tiempo toma ver resultados?",
-                        a: "Generalmente vemos un aumento en el alcance en el primer mes, pero los resultados de conversión sólidos suelen tomar de 3 a 6 meses de consistencia."
+                        q: "¿Necesito tener material propio o ustedes producen contenido?",
+                        a: "Podemos trabajar con material que tengas o encargarnos de la producción completa: fotos, videos, reels, guiones y todo lo necesario para tu comunicación."
                 },
                 {
-                        q: "¿Trabajan con marcas personales?",
-                        a: "¡Sí! Nos especializamos tanto en marcas corporativas como en marcas personales de alto perfil."
+                        q: "¿Cómo se mide el rendimiento de las redes?",
+                        a: "Realizamos reportes mensuales con métricas claras: alcance, interacción, crecimiento, rendimiento de contenidos y recomendaciones estratégicas."
                 },
                 {
-                        q: "¿Cuáles son sus precios?",
-                        a: "Nuestros paquetes comienzan desde $2,000 USD mensuales. Personalizamos cada propuesta según tus necesidades específicas."
-                }
+                        q: "Si no tengo muchos seguidores, ¿igual puedo crecer?",
+                        a: "Sí. El crecimiento no depende de la cantidad de seguidores actuales, sino de tener una estrategia clara, contenido de calidad y una comunicación coherente. Trabajamos para que tu marca conecte con las personas correctas, genere interacción real y atraiga una comunidad que crezca de manera orgánica y sostenida. Todos los perfiles empiezan en cero: lo importante es cómo se construye desde ahí."
+                },
+                {
+                        q: "¿Ustedes responden los mensajes o lo hago yo?",
+                        a: "Nos adaptamos a lo que necesite tu marca. Podemos encargarnos de la gestión de mensajes, consultas y comentarios, o trabajar en conjunto para que vos respondas lo que requiera conocimiento interno del negocio. Lo importante es mantener una comunicación rápida, clara y alineada al tono de tu marca —y eso lo definimos juntos desde el inicio."
+                },
         ];
 
         return (

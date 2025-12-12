@@ -14,8 +14,8 @@ const CTA: React.FC = () => {
              <div className="text-center md:text-left w-full">
                  <span className="inline-block px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold mb-6">Empieza ahora</span>
                  <h2 className="text-5xl md:text-6xl font-bold font-['Syne'] leading-[0.95] mb-6 tracking-tight">
-                    Tu viaje viral <br/>
-                    comienza <span className="italic font-serif font-light">aquí mismo.</span>
+                    Tu crecimiento  <br/>
+                   <span className="italic font-serif font-light">empieza acá.</span>
                  </h2>
                  <p className="text-gray-600 text-lg mb-10 max-w-md mx-auto md:mx-0">
                     Agenda una llamada de estrategia gratuita de 30 minutos y te mostraremos cómo convertir seguidores en clientes.

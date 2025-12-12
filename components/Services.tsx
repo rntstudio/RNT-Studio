@@ -6,19 +6,21 @@ const Services: React.FC = () => {
     {
       icon: <Camera className="w-8 h-8" />,
       title: "Creación de Contenido",
-      description: "Contenido pensado, estético y con intención. Videos cortos, UCG y piezas visuales que cuentan tu hitoria, detienen el scroll y construyen identidad",
+      description: "Contenido pensado, estético y con intención. Videos cortos, UGC y piezas visuales que cuentan tu historia, detienen el scroll y construyen identidad.",
       bg: "bg-[#F5F5F0]"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Gestión de Redes",
       description: "Estrategia, voz de marca y coherencia diaria. Planificamos, ejecutamos y analizamos tu presencia digital para que tus redes comuniquen con propósito.",
+      
       bg: "bg-[#FDFCF8]"
     },
     {
       icon: <Megaphone className="w-8 h-8" />,
       title: "Medios Pagados",
-      description: "Creamos y gestionamos campañas publicitarias dirigidas que convierten la atención en resultados y te ayudan a escalar.",
+      description: "Publicidad que potencia lo que ya construiste. Campañas inteligentes que transforman alcance en resultados y hacen que tu marca crezca de verdad.",
+      
       bg: "bg-[#FFFBF5]"
     }
   ];
@@ -31,8 +33,8 @@ const Services: React.FC = () => {
             Servicios
           </span>
           <h2 className="text-5xl md:text-6xl font-bold font-['Syne']">
-            Cómo podemos <br />
-            ayudarte a <span className="italic font-serif">creceeer</span>
+            Estrategias para  <br />
+            <span className="italic font-serif">impulsar tu negocio</span>
           </h2>
         </div>
 

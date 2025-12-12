@@ -4,13 +4,13 @@ import {renata, renata0, pipi,} from "../src/assets/";
 const Equipo: React.FC = () => {
   const team = [
     {
-      name: "Mi amiga la trola",
-      role: "Líder Creativa",
+      name: "Renata Montoto",
+      role: "Lider de Contenido & Estrategia",
       image: renata
     },
     {
-      name: "La amiga de la negra",
-      role: "Fundador & CEO",
+      name: "Constanza Nicrosini",
+      role: "Community Manager",
       image: pipi,
     },
   ];
