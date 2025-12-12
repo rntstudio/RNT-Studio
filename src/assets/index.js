@@ -9,10 +9,11 @@ export { default as logo07 } from './logo07.png';
 export { default as logo08 } from './logo08.svg';
 
 export { default as renata } from './renata-montoto.png'; 
-export { default as rode } from './rode.jpg';
+export { default as rode } from './rode01.jpg';
 export { default as coni } from './coni.jpg'; 
 export { default as renata_porro } from './renata_porro.jpg'; 
 export { default as rode_porro } from './rode_porro.jpg'; 
+export { default as renata } from './renata-montoto.png'; 
 
 export { default as tresemeVideo } from './videos/treseme.mp4';
 export { default as phone_scroll } from './videos/phone scroll.mp4';
