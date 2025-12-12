@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { InstagramLogo, TiktokLogo } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
+import { logo01,logo02, logo04,logo05, logo06 } from '../src/assets';
 import { tresemeVideo } from '../src/assets';
 
 const Hero: React.FC = () => {

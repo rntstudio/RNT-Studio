@@ -1,4 +1,13 @@
 // img files
+export { default as logo01 } from './logo01.png'; 
+export { default as logo02 } from './logo02.png';
+export { default as logo03 } from './logo03.png';
+export { default as logo04 } from './logo04.png';
+export { default as logo05 } from './logo05.png';
+export { default as logo06 } from './logo06.png';
+export { default as logo07 } from './logo07.png';
+export { default as logo08 } from './logo08.svg';
+
 export { default as renata } from './renata-montoto.png'; 
 export { default as renata0 } from './renata-montoto-0.png';
 export { default as pipi } from './pipi.jpg'; 
