@@ -5,7 +5,7 @@ const Equipo: React.FC = () => {
   const team = [
     {
       name: "Renata Montoto",
-      role: "Lider de Contenido & Estrategia",
+      role: "Founder & Líder de Contenido y Estrategia",
       image: renata,
     },
     {
@@ -14,8 +14,8 @@ const Equipo: React.FC = () => {
       image: coni,
     },
     {
-      name: "Rodrigo Schwarzenegger MCdonalds",
-      role: "Community Manager",
+      name: "Roderick Max Lean",
+      role: "Community Manager y editor de videos",
       image: rode,
     },
   ];
@@ -27,7 +27,7 @@ const Equipo: React.FC = () => {
         {/* Team Grid */}
         <div className="mb-20">
             <h3 className="text-3xl md:text-5xl font-bold font-['Syne'] text-center mb-16">
-                Conoce al equipo detrás de tu <span className="italic font-serif font-light">éxito</span>.
+                Conocé al equipo detrás de tu <span className="italic font-serif font-light">éxito</span>.
             </h3>
             <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
                 {team.map((member, index) => (

@@ -3,11 +3,11 @@ import { ArrowRight } from 'lucide-react';
 import { InstagramLogo, TiktokLogo } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import { logo01,logo02, logo04,logo05, logo06 } from '../src/assets';
-import { tresemeVideo } from '../src/assets';
+import { tresemeVideo, burger, knor, } from '../src/assets';
 
 const Hero: React.FC = () => {
   // Story-style video carousel (replace/extend these with your real story videos)
-  const storyVideos = useMemo(() => [tresemeVideo, tresemeVideo, tresemeVideo], []);
+  const storyVideos = useMemo(() => [tresemeVideo, knor, burger], []);
 
   const [activeStory, setActiveStory] = useState(0);
   const [progress, setProgress] = useState(0); // 0..1

@@ -12,6 +12,10 @@ export { default as renata } from './renata-montoto.png';
 export { default as rode } from './rode01.jpg';
 export { default as coni } from './coni.jpg'; 
 
+export { default as aura } from './aura.png'; 
+export { default as alimento } from './alimento.png'; 
 
 export { default as tresemeVideo } from './videos/treseme.mp4';
+export { default as knor } from './videos/knor.mov';
+export { default as burger } from './videos/burger.mov';
 export { default as phone_scroll } from './videos/phone scroll.mp4';
