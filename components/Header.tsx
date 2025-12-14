@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,9 +19,9 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'Inicio', href: '/inicio' },
-    { name: 'Nosotros', href: '/nosotros' },
-    { name: 'Casos de Éxito', href: '/CDE' },
+    { name: t('nav.home', 'Inicio'), href: '/inicio' },
+    { name: t('nav.about', 'Nosotros'), href: '/nosotros' },
+    { name: t('nav.work', 'Casos de Éxito'), href: '/CDE' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -45,15 +47,19 @@ const Header: React.FC = () => {
     navigate(baseHref);
   };
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+  };
+
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${
-        isScrolled ? 'bg-[#EFEDE8]/80 backdrop-blur-md border-b border-black/5' : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${isScrolled ? 'bg-[#EFEDE8]/80 backdrop-blur-md border-b border-black/5' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a 
-          href="/inicio" 
+        <a
+          href="/inicio"
           onClick={(e) => handleNavClick(e, '/inicio')}
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
@@ -64,8 +70,8 @@ const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
@@ -77,14 +83,22 @@ const Header: React.FC = () => {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <a 
-            href="/contacto" 
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black transition-colors"
+          >
+            <Globe className="w-4 h-4" />
+            <span>{i18n.language === 'en' ? 'ES' : 'EN'}</span>
+          </button>
+
+          <a
+            href="/contacto"
             onClick={(e) => handleNavClick(e, '/contacto')}
             className="hidden md:block px-5 py-2.5 bg-black text-white rounded-full text-sm font-semibold hover:scale-105 transition-transform"
           >
-            Agendar llamada
+            {t('nav.contact', 'Agendar llamada')}
           </a>
-          <button 
+          <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -97,8 +111,8 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-[#EFEDE8] p-6 border-b border-black/10 md:hidden flex flex-col gap-4 shadow-xl">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="text-lg font-medium text-gray-800"
               onClick={(e) => handleNavClick(e, link.href)}
@@ -106,12 +120,12 @@ const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a 
-            href="/contacto" 
+          <a
+            href="/contacto"
             onClick={(e) => handleNavClick(e, '/contacto')}
             className="px-5 py-3 bg-black text-white rounded-full text-center text-sm font-semibold"
           >
-            Agendar llamada
+            {t('nav.contact', 'Agendar llamada')}
           </a>
         </div>
       )}

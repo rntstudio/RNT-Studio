@@ -1,16 +1,18 @@
 import React from 'react';
-import { logo01, logo02, logo03, logo04,logo05, logo06, logo07, logo08, } from '../src/assets';
+import { logo01, logo02, logo03, logo04, logo05, logo06, logo07, logo08, } from '../src/assets';
 import { log } from 'console';
+import { useTranslation } from 'react-i18next';
 
 const LogoCarousel: React.FC = () => {
+  const { t } = useTranslation();
   const brands = [
-    logo01, logo02,logo03, logo04, logo05, logo06, logo07, logo08 
+    logo01, logo02, logo03, logo04, logo05, logo06, logo07, logo08
   ];
 
   return (
     <div className="pt-12 pb-20 border-y border-black/5 overflow-hidden bg-[#EFEDE8]">
       <div className="max-w-7xl mx-auto px-6 mb-6 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Marcas que confían en nosotros</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400">{t('logo_carousel.label', 'Marcas que confían en nosotros')}</p>
       </div>
       <div className="relative overflow-hidden group">
         {/* Track 1 */}

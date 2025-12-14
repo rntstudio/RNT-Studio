@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Loader2, Phone, Mail, Clock } from 'lucide-react';
 import { InstagramLogo, TiktokLogo, LinkedinLogo, FacebookLogo } from '@phosphor-icons/react';
+import { useTranslation } from 'react-i18next';
 
 interface ContactProps {
     endpoint?: string;
@@ -13,6 +14,7 @@ const Contact: React.FC<ContactProps> = ({ endpoint = "https://formspree.io/f/xa
     const [selectedServices, setSelectedServices] = useState<string[]>([]);
     const [selectedBudget, setSelectedBudget] = useState<string>("");
     const [details, setDetails] = useState("");
+    const { t } = useTranslation();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -58,13 +60,13 @@ const Contact: React.FC<ContactProps> = ({ endpoint = "https://formspree.io/f/xa
             }
 
             alert("¡Gracias! Nos pondremos en contacto pronto.");
-            
+
             setName("");
             setEmail("");
             setSelectedServices([]);
             setSelectedBudget("");
             setDetails("");
-            
+
         } catch (error) {
             console.error("Error enviando formulario:", error);
             alert("Hubo un error al enviar tu solicitud. Por favor intenta de nuevo.");
@@ -81,59 +83,66 @@ const Contact: React.FC<ContactProps> = ({ endpoint = "https://formspree.io/f/xa
         }
     };
 
-return (
-    <section id="contact" className="bg-[#EFEDE8] py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto px-4 md:px-8">
-                
-            {/* Lado Izquierdo - Formulario (50%) */}
-            <div className="flex items-start lg:items-center justify-center lg:justify-end">
-                <div className="w-full max-w-[560px] bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-14 shadow-sm">
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-['Syne'] mb-8 text-black">Contactanos</h3>
-                        
+    const serviceOptions = [
+        { key: 'content', label: t('contact.form.services_options.content', 'Contenido') },
+        { key: 'management', label: t('contact.form.services_options.management', 'Gestión') },
+        { key: 'ads', label: t('contact.form.services_options.ads', 'Ads') },
+        { key: 'all', label: t('contact.form.services_options.all', 'Todo') }
+    ];
+
+    return (
+        <section id="contact" className="bg-[#EFEDE8] py-16 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto px-4 md:px-8">
+
+                {/* Lado Izquierdo - Formulario (50%) */}
+                <div className="flex items-start lg:items-center justify-center lg:justify-end">
+                    <div className="w-full max-w-[560px] bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-14 shadow-sm">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-['Syne'] mb-8 text-black">{t('contact.title', 'Contactanos')}</h3>
+
                         <form onSubmit={handleSubmit} action={endpoint} method="POST" className="space-y-6">
                             <div className="space-y-4">
                                 <div className="group">
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-2 ml-1">Nombre *</label>
-                                    <input 
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.name_label', 'Nombre *')}</label>
+                                    <input
                                         id="name"
                                         name="name"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        required 
-                                        type="text" 
-                                        className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all outline-none" 
-                                        placeholder="Nombre, empresa/negocio/marca" 
+                                        required
+                                        type="text"
+                                        className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all outline-none"
+                                        placeholder={t('contact.form.name_placeholder', 'Nombre, empresa/negocio/marca')}
                                     />
                                 </div>
                                 <div className="group">
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2 ml-1">Correo *</label>
-                                    <input 
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.email_label', 'Correo *')}</label>
+                                    <input
                                         id="email"
                                         name="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        required 
-                                        type="email" 
-                                        className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all outline-none" 
-                                        placeholder="tu@email.com" 
+                                        required
+                                        type="email"
+                                        className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all outline-none"
+                                        placeholder={t('contact.form.email_placeholder', 'tu@email.com')}
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">¿Qué servicios te interesan?</label>
+                                <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.services_label', '¿Qué servicios te interesan?')}</label>
                                 <div className="flex flex-wrap gap-2">
-                                    {['Contenido', 'Gestión', 'Ads', 'Todo'].map(opt => (
-                                        <label key={opt} className="cursor-pointer group relative">
-                                            <input 
-                                                type="checkbox" 
+                                    {serviceOptions.map(opt => (
+                                        <label key={opt.key} className="cursor-pointer group relative">
+                                            <input
+                                                type="checkbox"
                                                 name="services"
-                                                className="peer sr-only" 
-                                                onChange={() => toggleService(opt)}
-                                                checked={selectedServices.includes(opt)}
+                                                className="peer sr-only"
+                                                onChange={() => toggleService(opt.label)}
+                                                checked={selectedServices.includes(opt.label)}
                                             />
                                             <span className="inline-block px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-medium text-gray-800 peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-gray-400 transition-all duration-200 ease-in-out">
-                                                {opt}
+                                                {opt.label}
                                             </span>
                                         </label>
                                     ))}
@@ -141,14 +150,14 @@ return (
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">¿Presupuesto mensual?</label>
+                                <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.budget_label', '¿Presupuesto mensual?')}</label>
                                 <div className="flex flex-wrap gap-2">
                                     {['- de $400K', '$400K-$750K', '$750K-1.5M', '$1.5M+'].map(opt => (
                                         <label key={opt} className="cursor-pointer">
-                                            <input 
-                                                type="radio" 
-                                                name="budget" 
-                                                className="peer sr-only" 
+                                            <input
+                                                type="radio"
+                                                name="budget"
+                                                className="peer sr-only"
                                                 onChange={() => setSelectedBudget(opt)}
                                                 checked={selectedBudget === opt}
                                             />
@@ -161,40 +170,40 @@ return (
                             </div>
 
                             <div>
-                                <label htmlFor="details" className="block text-sm font-medium text-gray-600 mb-2 ml-1">Detalles del proyecto *</label>
-                                <textarea 
+                                <label htmlFor="details" className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.details_label', 'Detalles del proyecto *')}</label>
+                                <textarea
                                     id="details"
                                     name="details"
                                     value={details}
                                     onChange={(e) => setDetails(e.target.value)}
-                                    required 
-                                    rows={3} 
-                                    className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all resize-none outline-none" 
-                                    placeholder="información clave para entender tus necesidades"
+                                    required
+                                    rows={3}
+                                    className="w-full bg-[#F5F5F0] rounded-lg border-none py-3 px-4 text-base placeholder:text-gray-400 text-gray-900 focus:ring-1 focus:ring-black focus:bg-[#F5F5F0] transition-all resize-none outline-none"
+                                    placeholder={t('contact.form.details_placeholder', 'información clave para entender tus necesidades')}
                                 ></textarea>
                             </div>
 
-                            <button 
-                                disabled={submitting} 
-                                type="submit" 
+                            <button
+                                disabled={submitting}
+                                type="submit"
                                 className="w-full bg-black text-white py-3 rounded-full font-bold text-base flex items-center justify-center gap-2 hover:bg-gray-900 transform active:scale-[0.99] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
-                                {submitting ? <Loader2 className="animate-spin" size={18} /> : <>Enviar <ArrowUpRight className="w-4 h-4" /></>}
+                                {submitting ? <Loader2 className="animate-spin" size={18} /> : <>{t('contact.form.submit', 'Enviar')} <ArrowUpRight className="w-4 h-4" /></>}
                             </button>
                         </form>
                     </div>
                 </div>
 
-            {/* Lado Derecho - Tarjetas de Contacto (50%) */}
-            <div className="flex items-start lg:items-center justify-center lg:justify-start">
-                <div className="w-full max-w-[560px] bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-14 shadow-sm">
+                {/* Lado Derecho - Tarjetas de Contacto (50%) */}
+                <div className="flex items-start lg:items-center justify-center lg:justify-start">
+                    <div className="w-full max-w-[560px] bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-14 shadow-sm">
                         {/* Header */}
                         <div className="mb-8">
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-['Syne'] mb-3 text-black">
-                                Otras formas de contacto
+                                {t('contact.other.title', 'Otras formas de contacto')}
                             </h3>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                                Estamos disponibles a través de múltiples canales.
+                                {t('contact.other.description', 'Estamos disponibles a través de múltiples canales.')}
                             </p>
                         </div>
 
@@ -213,7 +222,7 @@ return (
                                             <h3 className="font-semibold text-stone-900 text-sm md:text-base">Email</h3>
                                         </div>
                                         <p className="text-xs md:text-sm text-stone-500 mb-3 leading-relaxed">
-                                            Respuesta en 24 horas.
+                                            {t('contact.other.email_desc', 'Respuesta en 24 horas.')}
                                         </p>
                                         <a
                                             href="mailto:rnt.sstudio@gmail.com"
@@ -222,14 +231,14 @@ return (
                                         >
                                             rnt.sstudio@gmail.com
                                         </a>
-                                        <p className="text-xs text-stone-400">Respuesta garantizada</p>
+                                        <p className="text-xs text-stone-400">{t('contact.other.guarantee', 'Respuesta garantizada')}</p>
                                     </div>
 
                                     <div className="h-px bg-white/60" />
 
                                     {/* Redes */}
                                     <div className="min-w-0">
-                                        <h3 className="font-semibold text-stone-900 text-sm md:text-base mb-3">Síguenos</h3>
+                                        <h3 className="font-semibold text-stone-900 text-sm md:text-base mb-3">{t('contact.other.follow_us', 'Síguenos')}</h3>
                                         <div className="flex flex-wrap gap-2">
                                             <a
                                                 href="https://www.instagram.com/rnt_studios/"
@@ -260,7 +269,7 @@ return (
                                     <div className="p-2 bg-white/60 rounded-lg">
                                         <Clock size={18} className="text-stone-900" />
                                     </div>
-                                    <h3 className="font-semibold text-stone-900 text-sm md:text-base truncate">Horarios</h3>
+                                    <h3 className="font-semibold text-stone-900 text-sm md:text-base truncate">{t('contact.other.hours_label', 'Horarios')}</h3>
                                 </div>
                                 <ul className="text-xs md:text-sm space-y-1.5">
                                     <li className="flex justify-between">
@@ -284,11 +293,11 @@ return (
                                     <div className="p-2 bg-white/60 rounded-lg">
                                         <Phone size={18} className="text-stone-900" />
                                     </div>
-                                    <h3 className="font-semibold text-stone-900 text-sm md:text-base truncate">Teléfono</h3>
+                                    <h3 className="font-semibold text-stone-900 text-sm md:text-base truncate">{t('contact.other.phone_label', 'Teléfono')}</h3>
                                 </div>
                                 <p className="font-semibold text-stone-900 text-sm md:text-base mb-1 break-words">+ 54 9 11 3231 1023</p>
                                 <p className="text-xs md:text-sm text-stone-500 mb-3 leading-relaxed">
-                                    Llamanos para una consulta rápida.
+                                    {t('contact.other.phone_desc', 'Llamanos para una consulta rápida.')}
                                 </p>
                             </div>
 

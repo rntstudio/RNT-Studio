@@ -1,0 +1,162 @@
+{
+    "welcome": "Welcome to RNT Studio",
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "work": "Case Studies",
+        "contact": "Book a Call"
+    },
+    "hero": {
+        "title_main": "Where your brand",
+        "title_highlight": "makes sense",
+        "description": "At RNT Studios we empower brands with strategy, content, and management that generate results. We create identity, build community, and make your social networks truly grow.",
+        "cta_call": "Book a Call",
+        "cta_work": "View Work",
+        "social_reel": "Reel • Now",
+        "social_reply": "Send message",
+        "interaction": "Interaction"
+    },
+    "services": {
+        "label": "Services",
+        "title_main": "Strategies to",
+        "title_highlight": "boost your business",
+        "content": {
+            "title": "Content Creation",
+            "description": "Thoughtful, aesthetic, and intentional content. Short videos, UGC, and visual pieces that tell your story, stop the scroll, and build identity."
+        },
+        "management": {
+            "title": "Social Media Management",
+            "description": "Strategy, brand voice, and daily consistency. We plan, execute, and analyze your digital presence so your networks communicate with purpose."
+        },
+        "paid": {
+            "title": "Paid Media",
+            "description": "Advertising that powers up what you've already built. Smart campaigns that transform reach into results and make your brand truly grow."
+        }
+    },
+    "work": {
+        "section_label": "Case Studies",
+        "section_title": "Our Best Work",
+        "case_label": "Featured Project",
+        "case_desc": "A premium audio brand crafting high-quality headphones for music enthusiasts and creative professionals.",
+        "category_label": "Category",
+        "category_value": "Technology",
+        "platforms_label": "Platforms",
+        "year_label": "Year",
+        "challenge_label": "The Challenge",
+        "challenge_desc": "Border wanted to position itself as the premium choice for audio enthusiasts while breaking into the competitive headphone market dominated by larger brands.",
+        "strategy_label": "Our Strategy",
+        "strategy_desc": "We developed a content strategy focused on short-form video and product storytelling, optimized to maximize organic reach and interest conversions.",
+        "results_label": "The Results",
+        "results_views_label": "Reel Views",
+        "results_engagement_label": "Engagement",
+        "results_followers_label": "Follower Growth"
+    },
+    "about": {
+        "section_label": "About Us",
+        "section_title": "Who We Are",
+        "main_text": "At RNT Studio we help brands, businesses, and creators communicate with clarity and intention, building digital presences with identity and real growth. We don't just make content: we develop strategies that organize, differentiate, and empower from the inside out. We believe that communicating is finding a voice, an aesthetic, and a strategy that work together. Brands grow when what they say matches who they are, which is why we design content and strategies that are felt, seen, and work.",
+        "team_footer": "Facilitating the growth of over 20 successful brands"
+    },
+    "logo_carousel": {
+        "label": "Brands that trust us"
+    },
+    "ai_tool": {
+        "label": "RNT AI Studio",
+        "title": "Generate your viral strategy raw",
+        "description": "Don't know where to start? Use our internal AI tool to generate a quick content strategy snippet for your brand.",
+        "label_brand": "Brand Name",
+        "placeholder_brand": "e.g. Urban Coffee",
+        "label_industry": "Industry / Niche",
+        "placeholder_industry": "e.g. Sustainable Fashion",
+        "button_generate": "Generate Strategy",
+        "button_generating": "Generating...",
+        "loading_text": "Connecting to Gemini AI...",
+        "result_bio": "Profile Bio",
+        "result_hooks": "Viral Hooks",
+        "result_hashtags": "Hashtags",
+        "empty_state": "Enter your brand details to unlock AI insights."
+    },
+    "cta": {
+        "tag": "Start Now",
+        "title_main": "Your viral journey",
+        "title_sub": "begins",
+        "title_highlight": "right here.",
+        "description": "Schedule a free 30-minute strategy call and we'll show you how to turn followers into customers.",
+        "button": "Schedule a Call"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "form": {
+            "name_label": "Name *",
+            "name_placeholder": "Name, company/brand",
+            "email_label": "Email *",
+            "email_placeholder": "you@email.com",
+            "services_label": "What services are you interested in?",
+            "services_options": {
+                "content": "Content",
+                "management": "Management",
+                "ads": "Ads",
+                "all": "All"
+            },
+            "budget_label": "Monthly budget?",
+            "details_label": "Project details *",
+            "details_placeholder": "key information to understand your needs",
+            "submit": "Send"
+        },
+        "other": {
+            "title": "Other ways to contact",
+            "description": "We are available through multiple channels.",
+            "email_desc": "Response within 24 hours.",
+            "guarantee": "Response guaranteed",
+            "follow_us": "Follow us",
+            "hours_label": "Hours",
+            "phone_label": "Phone",
+            "phone_desc": "Call us for a quick consultation."
+        }
+    },
+    "faq": {
+        "tag": "Questions",
+        "title_main": "Frequently Asked",
+        "title_highlight": "Questions",
+        "items": [
+            {
+                "q": "How do you work on my brand strategy?",
+                "a": "We create a personalized strategy based on objectives, identity, audience, and metrics. Nothing is improvised: every action responds to a purpose."
+            },
+            {
+                "q": "Do I need to have my own material or do you produce content?",
+                "a": "We can work with material you have or handle full production: photos, videos, reels, scripts, and everything needed for your communication."
+            },
+            {
+                "q": "How is social media performance measured?",
+                "a": "We provide monthly reports with clear metrics: reach, engagement, growth, content performance, and strategic recommendations."
+            },
+            {
+                "q": "If I don't have many followers, can I still grow?",
+                "a": "Yes. Growth doesn't depend on current follower count, but on having a clear strategy, quality content, and coherent communication. We work so your brand connects with the right people, generates real interaction, and attracts a community that grows organically and sustainably. All profiles start at zero: what matters is how you build from there."
+            },
+            {
+                "q": "Do you reply to messages or do I?",
+                "a": "We adapt to what your brand needs. We can handle message management, inquiries, and comments, or work together so you answer what requires internal business knowledge. The important thing is to maintain fast, clear communication aligned with your brand tone—and we define that together from the start."
+            }
+        ]
+    },
+    "footer": {
+        "tagline_main": "Social media that drives",
+        "tagline_highlight": "your growth",
+        "sub_tagline": "For brands, businesses, and creators who want to stand out.",
+        "nav_title": "Navigate",
+        "connect_title": "Connect",
+        "info_title": "Info",
+        "designed_by": "Designed in Buenos Aires"
+    },
+    "equipo": {
+        "title_main": "Meet the team behind your",
+        "title_highlight": "success",
+        "roles": {
+            "renata": "Founder & Content & Strategy Lead",
+            "coni": "Community Manager",
+            "rode": "Community Manager & Video Editor"
+        }
+    }
+}

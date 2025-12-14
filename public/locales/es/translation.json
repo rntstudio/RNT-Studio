@@ -1,0 +1,162 @@
+{
+    "welcome": "Bienvenido a RNT Studio",
+    "nav": {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "work": "Casos de Éxito",
+        "contact": "Agendar llamada"
+    },
+    "hero": {
+        "title_main": "Donde tu marca",
+        "title_highlight": "cobra sentido",
+        "description": "En RNT Studios potenciamos marcas con estrategia, contenido y gestión que generan resultados. Creamos identidad, construimos comunidad y hacemos que tus redes crezcan de verdad.",
+        "cta_call": "Agendar llamada",
+        "cta_work": "Ver trabajos",
+        "social_reel": "Reel • Ahora",
+        "social_reply": "Enviar mensaje",
+        "interaction": "Interacción"
+    },
+    "services": {
+        "label": "Servicios",
+        "title_main": "Estrategias para",
+        "title_highlight": "impulsar tu negocio",
+        "content": {
+            "title": "Creación de Contenido",
+            "description": "Contenido pensado, estético y con intención. Videos cortos, UGC y piezas visuales que cuentan tu historia, detienen el scroll y construyen identidad."
+        },
+        "management": {
+            "title": "Gestión de Redes",
+            "description": "Estrategia, voz de marca y coherencia diaria. Planificamos, ejecutamos y analizamos tu presencia digital para que tus redes comuniquen con propósito."
+        },
+        "paid": {
+            "title": "Medios Pagados",
+            "description": "Publicidad que potencia lo que ya construiste. Campañas inteligentes que transforman alcance en resultados y hacen que tu marca crezca de verdad."
+        }
+    },
+    "work": {
+        "section_label": "Casos de Éxito",
+        "section_title": "Nuestros mejores trabajos",
+        "case_label": "Proyecto Destacado",
+        "case_desc": "Una marca de audio premium que crea audífonos de alta calidad para entusiastas de la música y profesionales creativos.",
+        "category_label": "Categoría",
+        "category_value": "Tecnología",
+        "platforms_label": "Plataformas",
+        "year_label": "Año",
+        "challenge_label": "El Desafío",
+        "challenge_desc": "Border quería posicionarse como la opción premium para entusiastas del audio mientras irrumpía en el competitivo mercado de audífonos dominado por marcas más grandes.",
+        "strategy_label": "Nuestra Estrategia",
+        "strategy_desc": "Desarrollamos una estrategia de contenido centrada en video corto y storytelling de producto, optimizada para maximizar alcance orgánico y conversiones de interés.",
+        "results_label": "Los Resultados",
+        "results_views_label": "Visualizaciones de Reels",
+        "results_engagement_label": "Engagement",
+        "results_followers_label": "Crecimiento de seguidores"
+    },
+    "about": {
+        "section_label": "Nosotros",
+        "section_title": "Quiénes somos",
+        "main_text": "En RNT Studio ayudamos a marcas, negocios y creadores a comunicar con claridad e intención, construyendo presencias digitales con identidad y crecimiento real. No hacemos contenido por hacer: desarrollamos estrategias que ordenan, diferencian y potencian desde adentro hacia afuera. Creemos que comunicar es encontrar una voz, una estética y una estrategia que trabajen juntas. Las marcas crecen cuando lo que dicen coincide con lo que son, y por eso diseñamos contenido y estrategias que se sienten, se ven y funcionan. Por eso diseñamos contenido con intención y estrategias que se sienten, se ven y funcionan.",
+        "team_footer": "Facilitando el crecimiento de mas de 20 marcas de manera exitosa"
+    },
+    "logo_carousel": {
+        "label": "Marcas que confían en nosotros"
+    },
+    "ai_tool": {
+        "label": "RNT AI Studio",
+        "title": "Genera tu estrategia viral a pelo",
+        "description": "¿No sabes por dónde empezar? Usa nuestra herramienta interna de IA para generar un fragmento de estrategia de contenido rápido para tu marca.",
+        "label_brand": "Nombre de la Marca",
+        "placeholder_brand": "ej. Café Urbano",
+        "label_industry": "Industria / Nicho",
+        "placeholder_industry": "ej. Moda Sostenible",
+        "button_generate": "Generar Estrategia",
+        "button_generating": "Generando...",
+        "loading_text": "Conectando con Gemini AI...",
+        "result_bio": "Bio del Perfil",
+        "result_hooks": "Ganchos Virales",
+        "result_hashtags": "Hashtags",
+        "empty_state": "Ingresa los detalles de tu marca para desbloquear insights de IA."
+    },
+    "cta": {
+        "tag": "Empieza ahora",
+        "title_main": "Tu viaje viral",
+        "title_sub": "comienza",
+        "title_highlight": "aquí mismo.",
+        "description": "Agenda una llamada de estrategia gratuita de 30 minutos y te mostraremos cómo convertir seguidores en clientes.",
+        "button": "Agendar una llamada"
+    },
+    "contact": {
+        "title": "Contactanos",
+        "form": {
+            "name_label": "Nombre *",
+            "name_placeholder": "Nombre, empresa/negocio/marca",
+            "email_label": "Correo *",
+            "email_placeholder": "tu@email.com",
+            "services_label": "¿Qué servicios te interesan?",
+            "services_options": {
+                "content": "Contenido",
+                "management": "Gestión",
+                "ads": "Ads",
+                "all": "Todo"
+            },
+            "budget_label": "¿Presupuesto mensual?",
+            "details_label": "Detalles del proyecto *",
+            "details_placeholder": "información clave para entender tus necesidades",
+            "submit": "Enviar"
+        },
+        "other": {
+            "title": "Otras formas de contacto",
+            "description": "Estamos disponibles a través de múltiples canales.",
+            "email_desc": "Respuesta en 24 horas.",
+            "guarantee": "Respuesta garantizada",
+            "follow_us": "Síguenos",
+            "hours_label": "Horarios",
+            "phone_label": "Teléfono",
+            "phone_desc": "Llamanos para una consulta rápida."
+        }
+    },
+    "faq": {
+        "tag": "Preguntas",
+        "title_main": "Preguntas",
+        "title_highlight": "Frecuentes",
+        "items": [
+            {
+                "q": "¿Cómo trabajan la estrategia de mi marca?",
+                "a": "Creamos una estrategia personalizada basada en objetivos, identidad, audiencia y métricas. Nada se improvisa: cada acción responde a un propósito."
+            },
+            {
+                "q": "¿Necesito tener material propio o ustedes producen contenido?",
+                "a": "Podemos trabajar con material que tengas o encargarnos de la producción completa: fotos, videos, reels, guiones y todo lo necesario para tu comunicación."
+            },
+            {
+                "q": "¿Cómo se mide el rendimiento de las redes?",
+                "a": "Realizamos reportes mensuales con métricas claras: alcance, interacción, crecimiento, rendimiento de contenidos y recomendaciones estratégicas."
+            },
+            {
+                "q": "Si no tengo muchos seguidores, ¿igual puedo crecer?",
+                "a": "Sí. El crecimiento no depende de la cantidad de seguidores actuales, sino de tener una estrategia clara, contenido de calidad y una comunicación coherente. Trabajamos para que tu marca conecte con las personas correctas, genere interacción real y atraiga una comunidad que crezca de manera orgánica y sostenida. Todos los perfiles empiezan en cero: lo importante es cómo se construye desde ahí."
+            },
+            {
+                "q": "¿Ustedes responden los mensajes o lo hago yo?",
+                "a": "Nos adaptamos a lo que necesite tu marca. Podemos encargarnos de la gestión de mensajes, consultas y comentarios, o trabajar en conjunto para que vos respondas lo que requiera conocimiento interno del negocio. Lo importante es mantener una comunicación rápida, clara y alineada al tono de tu marca —y eso lo definimos juntos desde el inicio."
+            }
+        ]
+    },
+    "footer": {
+        "tagline_main": "Redes sociales que impulsan",
+        "tagline_highlight": "tu crecimiento",
+        "sub_tagline": "Para marcas, negocios y creadores que quieren destacar.",
+        "nav_title": "Navegar",
+        "connect_title": "Conectar",
+        "info_title": "Info",
+        "designed_by": "Diseñado en Buenos Aires"
+    },
+    "equipo": {
+        "title_main": "Conocé al equipo detrás de tu",
+        "title_highlight": "éxito",
+        "roles": {
+            "renata": "Founder & Líder de Contenido y Estrategia",
+            "coni": "Community Manager",
+            "rode": "Community Manager y editor de videos"
+        }
+    }
+}
