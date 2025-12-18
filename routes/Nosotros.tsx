@@ -13,7 +13,6 @@ function App() {
       <main>
         <AboutUs />
         <Equipo />
-        <FAQ />
         <CTA />
       </main>
     </div>

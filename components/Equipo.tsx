@@ -6,17 +6,17 @@ const Equipo: React.FC = () => {
   const { t } = useTranslation();
   const team = [
     {
-      name: "Renata Montoto",
-      role: t('equipo.roles.renata', 'Founder & Líder de Contenido y Estrategia'),
-      image: renata,
-    },
-    {
       name: "Constanza Nicrosini",
       role: t('equipo.roles.coni', 'Community Manager'),
       image: coni,
     },
     {
-      name: "Roderick Max Lean",
+      name: "Renata Montoto",
+      role: t('equipo.roles.renata', 'Founder & Líder de Contenido y Estrategia'),
+      image: renata,
+    },
+    {
+      name: "Roderick Mac Lean",
       role: t('equipo.roles.rode', 'Community Manager y editor de videos'),
       image: rode,
     },
@@ -31,7 +31,7 @@ const Equipo: React.FC = () => {
           <h3 className="text-3xl md:text-5xl font-bold font-['Syne'] text-center mb-16">
             {t('equipo.title_main', 'Conocé al equipo detrás de tu')} <span className="italic font-serif font-light">{t('equipo.title_highlight', 'éxito')}</span>.
           </h3>
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="group">
                 <div className="relative h-[450px] md:h-[550px] rounded-[2rem] overflow-hidden mb-6 bg-gray-200">

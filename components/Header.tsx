@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const langMenuRef = useRef<HTMLDivElement | null>(null);
   const { t, i18n } = useTranslation();
+  const currentLang = i18n.language?.startsWith('en') ? 'en' : 'es';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,19 @@ const Header: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!langMenuRef.current) return;
+      const target = event.target as Node;
+      if (!langMenuRef.current.contains(target)) {
+        setLangMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const navigate = useNavigate();
@@ -27,6 +43,7 @@ const Header: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+    setLangMenuOpen(false);
 
     // Always go to the top when using the navbar
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -47,9 +64,9 @@ const Header: React.FC = () => {
     navigate(baseHref);
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
+  const setLanguage = (lang: 'en' | 'es') => {
+    i18n.changeLanguage(lang);
+    setLangMenuOpen(false);
   };
 
   return (
@@ -83,13 +100,45 @@ const Header: React.FC = () => {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black transition-colors"
-          >
-            <Globe className="w-4 h-4" />
-            <span>{i18n.language === 'en' ? 'ES' : 'EN'}</span>
-          </button>
+          <div ref={langMenuRef} className="relative">
+            <button
+              type="button"
+              onClick={() => setLangMenuOpen((v) => !v)}
+              className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black transition-colors"
+              aria-haspopup="menu"
+              aria-expanded={langMenuOpen}
+            >
+              <Globe className="w-4 h-4" />
+              <span>{currentLang === 'en' ? 'EN' : 'ES'}</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${langMenuOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+
+            {langMenuOpen && (
+              <div
+                className="absolute right-0 mt-2 w-24 bg-[#EFEDE8] border border-black/10 rounded-xl shadow-lg overflow-hidden"
+                role="menu"
+              >
+                <button
+                  type="button"
+                  onClick={() => setLanguage('es')}
+                  className={`w-full px-3 py-2 text-left text-sm hover:bg-black/5 transition-colors ${currentLang === 'es' ? 'font-semibold text-black' : 'text-gray-700'}`}
+                  role="menuitem"
+                >
+                  ES
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLanguage('en')}
+                  className={`w-full px-3 py-2 text-left text-sm hover:bg-black/5 transition-colors ${currentLang === 'en' ? 'font-semibold text-black' : 'text-gray-700'}`}
+                  role="menuitem"
+                >
+                  EN
+                </button>
+              </div>
+            )}
+          </div>
 
           <a
             href="/contacto"

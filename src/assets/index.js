@@ -8,7 +8,7 @@ export { default as logo06 } from './logo06.png';
 export { default as logo07 } from './logo07.png';
 export { default as logo08 } from './logo08.svg';
 
-export { default as renata } from './renata-montoto.png'; 
+export { default as renata } from './renata-montoto.jpg'; 
 export { default as rode } from './rode01.jpg';
 export { default as coni } from './coni.jpg'; 
 
