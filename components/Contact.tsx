@@ -152,7 +152,7 @@ const Contact: React.FC<ContactProps> = ({ endpoint = "https://formspree.io/f/xa
                             <div>
                                 <label className="block text-sm font-medium text-gray-600 mb-2 ml-1">{t('contact.form.budget_label', '¿Presupuesto mensual?')}</label>
                                 <div className="flex flex-wrap gap-2">
-                                    {['- de $400K', '$400K-$750K', '$750K-1.5M', '$1.5M+'].map(opt => (
+                                    {['- de $500K', '$500K-$1.1M', '$1.1M-2.5M', '$2.5M+'].map(opt => (
                                         <label key={opt} className="cursor-pointer">
                                             <input
                                                 type="radio"
