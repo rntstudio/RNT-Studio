@@ -60,7 +60,10 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:rnt.sstudio@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:rnt.sstudio@gmail.com?subject=Consulta%20desde%20RNT%20Studio&body=Hola%2C%20quiero%20hacer%20una%20consulta.%0A%0A"
+                    className="hover:text-white transition-colors"
+                  >
                     rnt.sstudio@gmail.com
                   </a>
                 </li>
