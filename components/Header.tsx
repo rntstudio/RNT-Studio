@@ -35,7 +35,7 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: t('nav.home', 'Inicio'), href: '/inicio' },
+    { name: t('nav.home', 'Inicio'), href: '/' },
     { name: t('nav.about', 'Nosotros'), href: '/nosotros' },
     { name: t('nav.work', 'Casos de Éxito'), href: '/CDE' },
   ];
