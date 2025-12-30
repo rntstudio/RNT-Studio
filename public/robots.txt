@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rntstudio.com.ar/sitemap.xml
