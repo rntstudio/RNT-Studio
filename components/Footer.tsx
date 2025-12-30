@@ -55,10 +55,14 @@ const Footer: React.FC = () => {
               <h3 className="font-bold mb-6 text-sm uppercase tracking-wider text-white">{t('footer.connect_title', 'Conectar')}</h3>
               <ul className="space-y-4 text-gray-400 font-medium">
                 <li>
-                  <p className="hover:text-white transition-colors">+54 9 11 3231-1023</p>
+                  <a href="https://wa.me/5491132311023" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    +54 9 11 3231-1023
+                  </a>
                 </li>
                 <li>
-                  <p className="hover:text-white transition-colors">rnt.sstudio@gmail.com</p>
+                  <a href="mailto:rnt.sstudio@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    rnt.sstudio@gmail.com
+                  </a>
                 </li>
                 <li>
                   <a
@@ -84,7 +88,7 @@ const Footer: React.FC = () => {
               <h3 className="font-bold mb-6 text-sm uppercase tracking-wider text-white">{t('footer.info_title', 'Info')}</h3>
               <ul className="space-y-4 text-gray-400 font-medium">
                 <li><Link to="/contacto" className="hover:text-white transition-colors">{t('nav.contact', 'Contacto')}</Link></li>
-                <li><span className="opacity-50 cursor-not-allowed">404</span></li>
+                <li><span className="opacity-50 cursor-not-allowed"></span></li>
               </ul>
             </div>
           </div>
