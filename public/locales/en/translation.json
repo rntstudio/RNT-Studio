@@ -36,20 +36,111 @@
     "work": {
         "section_label": "Case Studies",
         "section_title": "Our Best Work",
-        "case_label": "Featured Project",
-        "case_desc": "A premium audio brand crafting high-quality headphones for music enthusiasts and creative professionals.",
-        "category_label": "Category",
-        "category_value": "Technology",
-        "platforms_label": "Platforms",
-        "year_label": "Year",
-        "challenge_label": "The Challenge",
-        "challenge_desc": "Border wanted to position itself as the premium choice for audio enthusiasts while breaking into the competitive headphone market dominated by larger brands.",
-        "strategy_label": "Our Strategy",
-        "strategy_desc": "We developed a content strategy focused on short-form video and product storytelling, optimized to maximize organic reach and interest conversions.",
-        "results_label": "The Results",
-        "results_views_label": "Reel Views",
-        "results_engagement_label": "Engagement",
-        "results_followers_label": "Follower Growth"
+        "cases": [
+            {
+                "id": "24th_street",
+                "label": "Featured Project",
+                "title": "24th Street Burger",
+                "image": "https://picsum.photos/1600/900?random=1",
+                "description": "24th Street Burger is an urban gastronomic brand specializing in smash burgers, recognized for its street identity, its bold proposal, and a young community that values the experience as much as the product.",
+                "category_label": "Category",
+                "category": "Gastronomy / Food & Beverage",
+                "platforms_label": "Platforms",
+                "platforms": [
+                    "Instagram",
+                    "TikTok"
+                ],
+                "year_label": "Year",
+                "year": "2024–2025",
+                "challenge_label": "The Challenge",
+                "challenge": "24th Street Burger needed to professionalize its digital presence and scale its organic reach in a highly competitive market, where many brands compete for attention with similar content. The main challenge was to differentiate the brand, strengthen its visual and narrative identity, and transform content into a real growth tool, without relying exclusively on paid advertising.",
+                "strategy_label": "Our Strategy",
+                "strategy": "We developed a content strategy focused on short-form video, prioritizing reels with high visual impact and product-centric storytelling. We worked on three pillars: Appetite appeal and direct content, optimized for retention (first 3 seconds key). Street brand narrative, aligned with the urban and authentic tone of 24th Street Burger. Organic optimization, analyzing performance metrics to adjust formats, duration, and frequency. Additionally, we organized the grid and messages to generate visual coherence, reinforce brand recognition, and stimulate constant interaction with the community.",
+                "results_label": "The Results",
+                "stats": [
+                    {
+                        "value": "128K",
+                        "label": "Reel Views"
+                    },
+                    {
+                        "value": "245%",
+                        "label": "Engagement"
+                    },
+                    {
+                        "value": "189%",
+                        "label": "Follower Growth"
+                    }
+                ]
+            },
+            {
+                "id": "niu_padel",
+                "label": "Featured Project",
+                "title": "NIU Pádel",
+                "image": "https://picsum.photos/1600/900?random=2",
+                "description": "NIU Pádel is a brand producing padel balls, developed with professional standards and used as the brand's official ball in different gaming and competition contexts. Its differentiator lies in the control of the production process and the consistency of performance on the court.",
+                "category_label": "Category",
+                "category": "Sports / Padel",
+                "platforms_label": "Platforms",
+                "platforms": [
+                    "Instagram"
+                ],
+                "year_label": "Year",
+                "year": "2024–2025",
+                "challenge_label": "The Challenge",
+                "challenge": "NIU was not looking to grow followers immediately. The main challenge was to organize and clarify communication to make it clear that: NIU is a producer, not a reseller. The balls are proprietary development. The product plays an official role within the brand and its sports proposal. In a market saturated with promotional messages, the challenge was to build credibility and position NIU as a serious, technical, and reliable brand, even with a still small community.",
+                "strategy_label": "Our Strategy",
+                "strategy": "We developed an educational and technical content strategy, focusing on positioning and brand clarity over volume. The work pillars were: Informative content explaining the process, materials, and real use of the product. Educational and comparative reels, designed to generate saves and attentive reading. Simplified technical language, accessible to amateur and advanced players. Visual and narrative coherence, reinforcing NIU's role as a producer and reference.",
+                "results_label": "The Results",
+                "stats": [
+                    {
+                        "value": "145K",
+                        "label": "Total Reel Views"
+                    },
+                    {
+                        "value": "6.9%",
+                        "label": "Average Engagement"
+                    },
+                    {
+                        "value": "+92%",
+                        "label": "Growth in Organic Reach"
+                    }
+                ]
+            },
+            {
+                "id": "iris_spa",
+                "label": "Featured Project",
+                "title": "Iris Spa",
+                "image": "https://picsum.photos/1600/900?random=3",
+                "description": "Iris Spa is a wellness and integral aesthetics space focused on personal care, relaxation, and sensory experience. It offers facial and body treatments in an environment designed to disconnect, prioritizing detail, calm, and personalized attention.",
+                "category_label": "Category",
+                "category": "Aesthetics / Wellness",
+                "platforms_label": "Platforms",
+                "platforms": [
+                    "Instagram"
+                ],
+                "year_label": "Year",
+                "year": "2025",
+                "challenge_label": "The Challenge",
+                "challenge": "Iris Spa went through a complete rebranding process. The main challenge was to rebuild its identity from scratch, ensuring the new image coexists with an existing community of over 31.1K followers. The goal was: To make the new visual and conceptual identity known. Align aesthetics, message, and experience. Recover and boost organic reach, without resorting to paid campaigns.",
+                "strategy_label": "Our Strategy",
+                "strategy": "We developed a 100% organic branding and content strategy, where identity was the central axis of all communication. The main focus areas were: Construction of the new visual universe (palette, style, tone, and rhythm). Sensory and aspirational reels, designed to convey calm and experience. Brand storytelling, showing the space, rituals, and details. Optimization of formats, prioritizing reach, retention, and saves. The goal was not just to communicate the change, but to make it felt in every piece of content.",
+                "results_label": "The Results",
+                "stats": [
+                    {
+                        "value": "1.9M",
+                        "label": "Total Reel Views"
+                    },
+                    {
+                        "value": "6.3%",
+                        "label": "Average Engagement"
+                    },
+                    {
+                        "value": "+260%",
+                        "label": "Growth in Organic Reach"
+                    }
+                ]
+            }
+        ]
     },
     "about": {
         "section_label": "About Us",

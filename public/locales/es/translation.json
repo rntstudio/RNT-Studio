@@ -36,20 +36,111 @@
     "work": {
         "section_label": "Casos de Éxito",
         "section_title": "Nuestros mejores trabajos",
-        "case_label": "Proyecto Destacado",
-        "case_desc": "Una marca de audio premium que crea audífonos de alta calidad para entusiastas de la música y profesionales creativos.",
-        "category_label": "Categoría",
-        "category_value": "Tecnología",
-        "platforms_label": "Plataformas",
-        "year_label": "Año",
-        "challenge_label": "El Desafío",
-        "challenge_desc": "Border quería posicionarse como la opción premium para entusiastas del audio mientras irrumpía en el competitivo mercado de audífonos dominado por marcas más grandes.",
-        "strategy_label": "Nuestra Estrategia",
-        "strategy_desc": "Desarrollamos una estrategia de contenido centrada en video corto y storytelling de producto, optimizada para maximizar alcance orgánico y conversiones de interés.",
-        "results_label": "Los Resultados",
-        "results_views_label": "Visualizaciones de Reels",
-        "results_engagement_label": "Engagement",
-        "results_followers_label": "Crecimiento de seguidores"
+        "cases": [
+            {
+                "id": "24th_street",
+                "label": "Proyecto Destacado",
+                "title": "24th Street Burger",
+                "image": "https://picsum.photos/1600/900?random=1",
+                "description": "24th Street Burger es una marca gastronómica urbana especializada en hamburguesas smash, reconocida por su identidad street, su propuesta contundente y una comunidad joven que valora la experiencia tanto como el producto.",
+                "category_label": "Categoría",
+                "category": "Gastronomía / Food & Beverage",
+                "platforms_label": "Plataformas",
+                "platforms": [
+                    "Instagram",
+                    "TikTok"
+                ],
+                "year_label": "Año",
+                "year": "2024–2025",
+                "challenge_label": "El Desafío",
+                "challenge": "24th Street Burger necesitaba profesionalizar su presencia digital y escalar su alcance orgánico en un mercado altamente competitivo, donde muchas marcas compiten por atención con contenidos similares. El principal reto era diferenciar la marca, fortalecer su identidad visual y narrativa, y transformar el contenido en una herramienta real de crecimiento, sin depender exclusivamente de publicidad paga.",
+                "strategy_label": "Nuestra Estrategia",
+                "strategy": "Desarrollamos una estrategia de contenido enfocada en video corto, priorizando reels con alto impacto visual y storytelling centrado en el producto. Trabajamos sobre tres pilares: Contenido apetitoso y directo, optimizado para retención (primeros 3 segundos clave). Narrativa de marca street, alineada al tono urbano y auténtico de 24th Street Burger. Optimización orgánica, analizando métricas de performance para ajustar formatos, duración y frecuencia. Además, ordenamos la grilla y los mensajes para generar coherencia visual, reforzar reconocimiento de marca y estimular la interacción constante con la comunidad.",
+                "results_label": "Los Resultados",
+                "stats": [
+                    {
+                        "value": "128K",
+                        "label": "Visualizaciones de Reels"
+                    },
+                    {
+                        "value": "245%",
+                        "label": "Engagement"
+                    },
+                    {
+                        "value": "189%",
+                        "label": "Crecimiento de seguidores"
+                    }
+                ]
+            },
+            {
+                "id": "niu_padel",
+                "label": "Proyecto Destacado",
+                "title": "NIU Pádel",
+                "image": "https://picsum.photos/1600/900?random=2",
+                "description": "NIU Pádel es una marca productora de pelotas de pádel, desarrolladas con estándares profesionales y utilizadas como pelota oficial de la marca en distintos contextos de juego y competencia. Su diferencial está en el control del proceso productivo y en la consistencia del rendimiento dentro de la cancha.",
+                "category_label": "Categoría",
+                "category": "Deporte / Pádel",
+                "platforms_label": "Plataformas",
+                "platforms": [
+                    "Instagram"
+                ],
+                "year_label": "Año",
+                "year": "2024–2025",
+                "challenge_label": "El Desafío",
+                "challenge": "NIU no buscaba crecer en seguidores de forma inmediata. El principal desafío era ordenar y clarificar la comunicación para dejar en claro que: NIU es productora, no revendedora. Las pelotas son desarrollo propio. El producto cumple un rol oficial dentro de la marca y su propuesta deportiva. En un mercado saturado de mensajes promocionales, el reto fue construir credibilidad y posicionar a NIU como una marca seria, técnica y confiable, incluso con una comunidad aún pequeña.",
+                "strategy_label": "Nuestra Estrategia",
+                "strategy": "Desarrollamos una estrategia de contenido educativo y técnico, con foco en posicionamiento y claridad de marca por sobre el volumen. Los pilares de trabajo fueron: Contenido informativo que explique el proceso, los materiales y el uso real del producto. Reels educativos y comparativos, pensados para generar guardados y lectura atenta. Lenguaje técnico simplificado, accesible para jugadores amateurs y avanzados. Coherencia visual y narrativa, reforzando el rol de NIU como productor y referente.",
+                "results_label": "Los Resultados",
+                "stats": [
+                    {
+                        "value": "145K",
+                        "label": "Visualizaciones totales en Reels"
+                    },
+                    {
+                        "value": "6.9%",
+                        "label": "Engagement promedio"
+                    },
+                    {
+                        "value": "+92%",
+                        "label": "Crecimiento en alcance orgánico"
+                    }
+                ]
+            },
+            {
+                "id": "iris_spa",
+                "label": "Proyecto Destacado",
+                "title": "Iris Spa",
+                "image": "https://picsum.photos/1600/900?random=3",
+                "description": "Iris Spa es un espacio de bienestar y estética integral enfocado en el cuidado personal, la relajación y la experiencia sensorial. Ofrece tratamientos faciales y corporales en un entorno diseñado para desconectar, priorizando el detalle, la calma y la atención personalizada.",
+                "category_label": "Categoría",
+                "category": "Estética / Bienestar",
+                "platforms_label": "Plataformas",
+                "platforms": [
+                    "Instagram"
+                ],
+                "year_label": "Año",
+                "year": "2025",
+                "challenge_label": "El Desafío",
+                "challenge": "Iris Spa atravesó un proceso de cambio de marca completo. El principal desafío fue reconstruir su identidad desde cero, logrando que la nueva imagen conviva con una comunidad ya existente de más de 31.1K seguidores. El objetivo fue: Dar a conocer la nueva identidad visual y conceptual. Alinear estética, mensaje y experiencia. Recuperar y potenciar el alcance orgánico, sin recurrir a campañas pagas.",
+                "strategy_label": "Nuestra Estrategia",
+                "strategy": "Desarrollamos una estrategia de branding y contenido 100% orgánica, donde la identidad fue el eje central de toda la comunicación. Los principales focos de trabajo fueron: Construcción del nuevo universo visual (paleta, estilo, tono y ritmo). Reels sensoriales y aspiracionales, pensados para transmitir calma y experiencia. Storytelling de marca, mostrando el espacio, los rituales y los detalles. Optimización de formatos, priorizando alcance, retención y guardados. El objetivo no fue solo comunicar el cambio, sino hacerlo sentir en cada pieza de contenido.",
+                "results_label": "Los Resultados",
+                "stats": [
+                    {
+                        "value": "1.9M",
+                        "label": "Visualizaciones totales en Reels"
+                    },
+                    {
+                        "value": "6.3%",
+                        "label": "Engagement promedio"
+                    },
+                    {
+                        "value": "+260%",
+                        "label": "Crecimiento en alcance orgánico"
+                    }
+                ]
+            }
+        ]
     },
     "about": {
         "section_label": "Nosotros",
