@@ -14,6 +14,8 @@ export { default as coni } from './coni.jpg';
 
 export { default as aura } from './aura.png';
 export { default as alimento } from './alimento.png';
+export { default as vekka } from './vekka.png';
+export { default as autos_ninos } from './autos_nino.png';
 
 export { default as tresemeVideo } from './videos/treseme.mp4';
 export { default as knor } from './videos/knor.mov';

@@ -6,6 +6,7 @@ import Inicio from './routes/Inicio';
 import CDE from './routes/CDE';
 import Contacto from './routes/Contacto';
 import Nosotros from './routes/Nosotros';
+import WorkDetail from './components/WorkDetail';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Navigate to="/" replace />} />
           <Route path="/CDE" element={<CDE />} />
+          <Route path="/caso/:id" element={<WorkDetail />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="*" element={<Navigate to="/" replace />} />

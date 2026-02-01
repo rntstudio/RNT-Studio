@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { aura, alimento } from '../src/assets';
+import { aura, alimento, vekka, autos_ninos } from '../src/assets';
 import { useTranslation } from 'react-i18next';
 
 const CTA: React.FC = () => {
-  const images = [aura, alimento];
+  const images = [aura, alimento, vekka, autos_ninos];
   const [current, setCurrent] = React.useState(0);
   const { t } = useTranslation();
 

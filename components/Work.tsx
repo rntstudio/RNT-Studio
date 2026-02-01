@@ -67,12 +67,8 @@ const Work: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Case Studies Grid */}
-                <div className="space-y-20">
-                    {cases.map((caseStudy, index) => (
-                        <CaseStudyCard key={caseStudy.id || index} caseStudy={caseStudy} index={index} />
-                    ))}
-                </div>
+                {/* Case Studies List - Grid Layout */}
+                <CaseStudyList cases={cases} />
             </div>
 
             <style>{`
@@ -107,6 +103,94 @@ const Work: React.FC = () => {
                 }
             `}</style>
         </section>
+    );
+};
+
+// List wrapper component for grid rendering
+const CaseStudyList: React.FC<{ cases: CaseStudy[] }> = ({ cases }) => {
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cases.map((caseStudy, index) => (
+                <ClientCard key={caseStudy.id || index} caseStudy={caseStudy} index={index} />
+            ))}
+        </div>
+    );
+};
+
+// Reusable Client Card component for list view
+const ClientCard: React.FC<{ caseStudy: CaseStudy; index: number }> = ({ caseStudy, index }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    const handleClick = () => {
+        window.location.href = `/caso/${caseStudy.id}`;
+    };
+
+    return (
+        <div
+            ref={cardRef}
+            onClick={handleClick}
+            className={`bg-[#FDFBF7] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+            style={{ transitionDelay: `${index * 100}ms` }}
+        >
+            {/* Image Container */}
+            <div className="relative h-64 overflow-hidden">
+                <img
+                    src={caseStudy.image}
+                    alt={caseStudy.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                {/* Status Badge - Top Left */}
+                <div className="absolute top-4 left-4">
+                    <span className="bg-[#D4A574] text-white px-4 py-2 rounded text-xs font-bold uppercase tracking-wider">
+                        {caseStudy.label}
+                    </span>
+                </div>
+
+                {/* Expand Icon - Top Right */}
+                <button className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110">
+                    <ArrowUpRight className="w-5 h-5" />
+                </button>
+            </div>
+
+            {/* Card Content */}
+            <div className="p-6">
+                {/* Category/Location */}
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-2 font-semibold">
+                    {caseStudy.category}
+                </p>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-['Syne'] group-hover:text-[#D4A574] transition-colors">
+                    {caseStudy.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    {caseStudy.description}
+                </p>
+            </div>
+        </div>
     );
 };
 
